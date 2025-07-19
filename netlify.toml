@@ -1,10 +1,44 @@
-# _netlify.toml
 [build]
 publish = "."
 
 [[redirects]]
-from = "/api/*"
-to = ":splat"
+from = "/api/dashscope/*"
+to = "https://dashscope.aliyuncs.com/compatible-mode/v1/:splat"
+status = 200
+force = true
+headers = { "Access-Control-Allow-Origin" = "*", "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers" = "Content-Type, Authorization" }
+
+[[redirects]]
+from = "/api/openai/*"
+to = "https://api.openai.com/v1/:splat"
+status = 200
+force = true
+headers = { "Access-Control-Allow-Origin" = "*", "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers" = "Content-Type, Authorization" }
+
+[[redirects]]
+from = "/api/siliconflow/*"
+to = "https://api.siliconflow.cn/v1/:splat"
+status = 200
+force = true
+headers = { "Access-Control-Allow-Origin" = "*", "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers" = "Content-Type, Authorization" }
+
+[[redirects]]
+from = "/api/openrouter/*"
+to = "https://openrouter.ai/api/v1/:splat"
+status = 200
+force = true
+headers = { "Access-Control-Allow-Origin" = "*", "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers" = "Content-Type, Authorization" }
+
+[[redirects]]
+from = "/api/deepseek/*"
+to = "https://api.deepseek.com/:splat"
+status = 200
+force = true
+headers = { "Access-Control-Allow-Origin" = "*", "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers" = "Content-Type, Authorization" }
+
+[[redirects]]
+from = "/api/internai/*"
+to = "https://chat.intern-ai.org.cn/api/v1/:splat"
 status = 200
 force = true
 headers = { "Access-Control-Allow-Origin" = "*", "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers" = "Content-Type, Authorization" }
