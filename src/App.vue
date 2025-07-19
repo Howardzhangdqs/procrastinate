@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import ChatInterface from './components/ChatInterface.vue'
-import SettingsPanel from './components/SettingsPanel.vue'
 </script>
 
 <template>
   <div id="app">
-    <ChatInterface />
-    <SettingsPanel />
+    Test
   </div>
 </template>
 
