@@ -38,6 +38,7 @@ export default defineConfig({
       "/api/openrouter": setupAPIPROXY("https://openrouter.ai/api/v1"),
       "/api/deepseek": setupAPIPROXY("https://api.deepseek.com"),
       "/api/internlm": setupAPIPROXY("https://chat.intern-ai.org.cn/api/v1"),
+      "/api/ssy": setupAPIPROXY("https://router.shengsuanyun.com/api/v1"),
     },
   },
 });
