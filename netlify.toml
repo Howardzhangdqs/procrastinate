@@ -2,6 +2,13 @@
 publish = "."
 
 [[redirects]]
+from = "/api/ssy/*"
+to = "https://router.shengsuanyun.com/api/v1/:splat"
+status = 200
+force = true
+headers = { "Access-Control-Allow-Origin" = "*", "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers" = "Content-Type, Authorization" }
+
+[[redirects]]
 from = "/api/dashscope/*"
 to = "https://dashscope.aliyuncs.com/compatible-mode/v1/:splat"
 status = 200
@@ -37,8 +44,15 @@ force = true
 headers = { "Access-Control-Allow-Origin" = "*", "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers" = "Content-Type, Authorization" }
 
 [[redirects]]
-from = "/api/internai/*"
+from = "/api/internlm/*"
 to = "https://chat.intern-ai.org.cn/api/v1/:splat"
+status = 200
+force = true
+headers = { "Access-Control-Allow-Origin" = "*", "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers" = "Content-Type, Authorization" }
+
+[[redirects]]
+from = "/api/kimi/*"
+to = "https://api.moonshot.cn/v1/:splat"
 status = 200
 force = true
 headers = { "Access-Control-Allow-Origin" = "*", "Access-Control-Allow-Methods" = "GET, POST, PUT, DELETE, OPTIONS", "Access-Control-Allow-Headers" = "Content-Type, Authorization" }
